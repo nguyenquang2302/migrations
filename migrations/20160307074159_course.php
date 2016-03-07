@@ -28,13 +28,13 @@ class Course extends AbstractMigration
     public function change()
     {
         $table = $this->table('course', [
-            'id' => 'course_id',
-            'primary_key' => 'course_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('name', 'string', ['limit' => 45])
             ->addColumn('description', 'string', ['limit' => 45])
             ->addColumn('grade_id', 'integer')
-            ->addForeignKey('grade_id', 'grade', 'grade_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('grade_id', 'grade', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
             ->create();
     }
 }

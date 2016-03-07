@@ -28,8 +28,8 @@ class ClassRoom extends AbstractMigration
     public function change()
     {
         $table = $this->table('classroom', [
-            'id' => 'classroom_id',
-            'primary_key' => 'classroom_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('year', 'year')
             ->addColumn('grade_id', 'integer')
@@ -38,7 +38,7 @@ class ClassRoom extends AbstractMigration
             ->addColumn('remarks', 'string', ['limit' => 45])
             ->addColumn('teacher_id', 'integer')
             ->addForeignKey('grade_id', 'grade', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
-            // ->addForeignKey('teacher_id', 'teacher', 'teacher_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('teacher_id', 'teacher', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
             ->create();
     }
 }

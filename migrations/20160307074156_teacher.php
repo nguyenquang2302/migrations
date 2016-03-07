@@ -28,8 +28,8 @@ class Teacher extends AbstractMigration
     public function change()
     {
          $table = $this->table('teacher', [
-            'id' => 'teacher_id',
-            'primary_key' => 'teacher_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('email', 'string', ['limit' => 45])
             ->addColumn('password', 'string', ['limit' => 45])

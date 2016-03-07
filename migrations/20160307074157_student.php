@@ -28,8 +28,8 @@ class Student extends AbstractMigration
     public function change()
     {
         $table = $this->table('student', [
-            'id' => 'student_id',
-            'primary_key' => 'student_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('email', 'string', ['limit' => 45])
             ->addColumn('password', 'string', ['limit' => 45])
@@ -44,7 +44,7 @@ class Student extends AbstractMigration
             ->addColumn('status', 'boolean')
             ->addColumn('last_login_date', 'timestamp')
             ->addColumn('last_login_ip', 'string', ['limit' => 45])
-            ->addForeignKey('parent_id', 'parent', 'parent_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('parent_id', 'parent', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
             ->create();
     }
 }

@@ -28,8 +28,8 @@ class Examtype extends AbstractMigration
     public function change()
     {
          $table = $this->table('exam_type', [
-            'id' => 'exam_type_id',
-            'primary_key' => 'exam_type_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('name', 'string', ['limit' => 45])
             ->addColumn('desc', 'string', ['limit' => 45])

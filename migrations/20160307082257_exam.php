@@ -28,13 +28,13 @@ class Exam extends AbstractMigration
     public function change()
     {
          $table = $this->table('exam', [
-            'id' => 'exam_id',
-            'primary_key' => 'exam_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('exam_type_id','integer')
             ->addColumn('name', 'string', ['limit' => 45])
             ->addColumn('start_date', 'timestamp')
-            ->addForeignKey('exam_type_id', 'exam_type', 'exam_type_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('exam_type_id', 'exam_type', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
             ->create();
     }
 }

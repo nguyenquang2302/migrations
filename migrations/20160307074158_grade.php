@@ -28,8 +28,8 @@ class Grade extends AbstractMigration
     public function change()
     {
         $table = $this->table('grade', [
-            'id' => 'grade_id',
-            'primary_key' => 'grade_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('name', 'string', ['limit' => 45])
             ->addColumn('desc', 'string', ['limit' => 45])

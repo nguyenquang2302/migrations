@@ -32,7 +32,7 @@ class Attendance extends AbstractMigration
             ->addColumn('student_id', 'integer')
             ->addColumn('status', 'boolean')
             ->addColumn('remarks', 'text')
-            ->addForeignKey('student_id', 'student', 'student_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('student_id', 'student', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
             ->create();
     }
 }

@@ -31,7 +31,7 @@ class ClassroomStudent extends AbstractMigration
         $table->addColumn('classroom_id', 'integer')
             ->addColumn('student_id', 'integer')
             ->addForeignKey('classroom_id', 'classroom', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
-            ->addForeignKey('student_id', 'student', 'student_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('student_id', 'student', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
             ->create();
     }
 }

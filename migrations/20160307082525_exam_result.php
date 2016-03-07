@@ -32,9 +32,9 @@ class ExamResult extends AbstractMigration
             ->addColumn('student_id', 'integer')
             ->addColumn('course_id', 'integer')
             ->addColumn('marks', 'string', ['limit' => 15])
-            ->addForeignKey('exam_id', 'exam', 'exam_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
-            ->addForeignKey('student_id', 'student', 'student_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
-            ->addForeignKey('course_id', 'course', 'course_id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('exam_id', 'exam', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('student_id', 'student', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->addForeignKey('course_id', 'course', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
             ->create();
     }
 }

@@ -28,8 +28,8 @@ class Parentt extends AbstractMigration
     public function change()
     {
         $table = $this->table('parent', [
-            'id' => 'parent_id',
-            'primary_key' => 'parent_id'
+            'id' => 'id',
+            'primary_key' => 'id'
         ]);
         $table->addColumn('email', 'string', ['limit' => 45])
             ->addColumn('password', 'string', ['limit' => 45])
