@@ -1,8 +1,7 @@
-# migrations
-#Tìm hiểu PHINX
-#I.	PHINX
+### Tìm hiểu PHINX
+### I.	PHINX
 -	Tạo ra các phiên bản  database dựa trên những thay đổi  thuộc tính, table, dữ liệu trong database..( quá trình phát triển database)
-#II.	Migration
+### II.	Migration
 Một migration mặc định có 3  hàm số: change,up,down
 -	Change: là hàm số mặc định khi chạy file. Hỗ trợ Đối với những thao tác như: Create Table , RenameTable ,AddColumn, RenameColum, AddIndex, AddForeignKey sẽ tạo ra tương đương với function up và function down
 -	Function Up(): Là hàm  chạy những  câu lệnh SQL cho phiên bản
@@ -13,10 +12,10 @@ Một migration mặc định có 3  hàm số: change,up,down
       2.Change chỉ nên sử dụng những thao tác được hỗ trợ => để có thể chạy rollback hay update 1 cách hiệu quả.
       3. Bất kể những  thao tác nào được viết để update trong function up thì đều phải  có thao tác khôi phục phiên bản cũ  trong function down và  phải viết theo qua trình ngược lại   cái gì chạy trước thì  thao tác sau.
       4.Khi tạo  file Migration nên chú ý khóa ngoại  những table nào  tham chiếu  sẽ tạo sau những table được tham chiếu	
-      III.	Seeding	
+### III.	Seeding	
 -	Tạo ra cơ sở dữ liệu mẫu.   (test database)
 -	 khi gọi seeding sẽ chạy hàm run();
-VI.	Commant 
+### IV.	Commant 
 -	https://phinx.readthedocs.org/en/latest/commands.html
 -	Vào thư mục project  chứa file phinx.yml 
 Sử dụng composer :
@@ -30,7 +29,7 @@ không thể sử dụng template và class cùng 1 lệnh
 •	php vendor/robmorgan/phinx/bin/phinx rollback   => Trở về phiên bản trước
 •	php vendor/robmorgan/phinx/bin/phinx status => kiểm tra phiên bản
 .....
-V.	Cấu hình database 
+### V.	Cấu hình database 
 * cấu hình file phinx.yml để  cài đặt database…
 
 paths:
