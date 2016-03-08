@@ -1,8 +1,8 @@
 # migrations
-Tìm hiểu PHINX
-I.	PHINX
+#Tìm hiểu PHINX
+#I.	PHINX
 -	Tạo ra các phiên bản  database dựa trên những thay đổi  thuộc tính, table, dữ liệu trong database..( quá trình phát triển database)
-II.	Migration
+#II.	Migration
 Một migration mặc định có 3  hàm số: change,up,down
 -	Change: là hàm số mặc định khi chạy file. Hỗ trợ Đối với những thao tác như: Create Table , RenameTable ,AddColumn, RenameColum, AddIndex, AddForeignKey sẽ tạo ra tương đương với function up và function down
 -	Function Up(): Là hàm  chạy những  câu lệnh SQL cho phiên bản
