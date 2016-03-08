@@ -59,7 +59,7 @@ environments:
     
        # Database default	
        
-# Thông số database
+### Thông số database
     production:
         adapter: mysql
         host: localhost
