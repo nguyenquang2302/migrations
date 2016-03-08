@@ -82,7 +82,7 @@ environments:
         adapter: mysql
         host: localhost
 
-#VI.KIỂU DỮ LIỆU
+# VI.KIỂU DỮ LIỆU
 
 https://phinx.readthedocs.org/en/latest/migrations.html#valid-column-types
 
