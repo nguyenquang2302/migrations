@@ -27,20 +27,20 @@ Tạo ra các phiên bản  database dựa trên những thay đổi  thuộc t�
 
 3.  Sử dụng composer : Thao tác  với Migration
 
--	 php vendor/robmorgan/phinx/bin/phinx create NameMigration  => tạo ra file migration với định dạng YYYYMMDDHHMMSS_name_migration
+-	 ```php vendor/robmorgan/phinx/bin/phinx create NameMigration ``` => tạo ra file migration với định dạng YYYYMMDDHHMMSS_name_migration
 
--	php vendor/robmorgan/phinx/bin/phinx create NameMigration  --template “<file>”   =>Ghi đè lên file
+-```	php vendor/robmorgan/phinx/bin/phinx create NameMigration  --template “<file>” ```  =>Ghi đè lên file
 
--	php vendor/robmorgan/phinx/bin/phinx create NameMigration  --class “<class>”   Sử dụng mẫu
+-	```php vendor/robmorgan/phinx/bin/phinx create NameMigration  --class “<class>” ```  Sử dụng mẫu
 không thể sử dụng template và class cùng 1 lệnh
 
-- php vendor/robmorgan/phinx/bin/phinx migrate     => chạy tất cả phiên bản của database theo thứ tự thời gian
+- ```php vendor/robmorgan/phinx/bin/phinx migrate ```    => chạy tất cả phiên bản của database theo thứ tự thời gian
 
--	php vendor/robmorgan/phinx/bin/phinx migrate –t  YYYYMMDDHHMMSS      chạy 1 file migration  thời gian cụ thể
+-```	php vendor/robmorgan/phinx/bin/phinx migrate –t  YYYYMMDDHHMMSS     ``` chạy 1 file migration  thời gian cụ thể
 
--	php vendor/robmorgan/phinx/bin/phinx rollback   => Trở về phiên bản trước
+-```	php vendor/robmorgan/phinx/bin/phinx rollback ```  => Trở về phiên bản trước
 
--	php vendor/robmorgan/phinx/bin/phinx status => kiểm tra phiên bản
+-```	php vendor/robmorgan/phinx/bin/phinx status ``` => kiểm tra phiên bản
 
 #V.CẤU HÌNH
 * cấu hình file phinx.yml để  cài đặt database…
