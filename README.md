@@ -8,10 +8,10 @@ Một migration mặc định có 3  hàm số: change,up,down
 -	Function DOWN(): LÀ hàm chạy những câu lệnh gỡ bỏ những thay đổi của Function up() để Phiên bản trở về phiên bản trước.
 
 **	Chú ý
-      1.Trong quá trình làm việc với bảng chỉ nên create hoặc update. Không nên save.
-      2.Change chỉ nên sử dụng những thao tác được hỗ trợ => để có thể chạy rollback hay update 1 cách hiệu quả.
-      3. Bất kể những  thao tác nào được viết để update trong function up thì đều phải  có thao tác khôi phục phiên bản cũ  trong function down và  phải viết theo qua trình ngược lại   cái gì chạy trước thì  thao tác sau.
-      4.Khi tạo  file Migration nên chú ý khóa ngoại  những table nào  tham chiếu  sẽ tạo sau những table được tham chiếu	
+      * Trong quá trình làm việc với bảng chỉ nên create hoặc update. Không nên save.
+      * Change chỉ nên sử dụng những thao tác được hỗ trợ => để có thể chạy rollback hay update 1 cách hiệu quả.
+      *  Bất kể những  thao tác nào được viết để update trong function up thì đều phải  có thao tác khôi phục phiên bản cũ  trong function down và  phải viết theo qua trình ngược lại   cái gì chạy trước thì  thao tác sau.
+      * Khi tạo  file Migration nên chú ý khóa ngoại  những table nào  tham chiếu  sẽ tạo sau những table được tham chiếu	
 ### III.	Seeding	
 -	Tạo ra cơ sở dữ liệu mẫu.   (test database)
 -	 khi gọi seeding sẽ chạy hàm run();
