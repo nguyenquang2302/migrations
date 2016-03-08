@@ -1,5 +1,5 @@
-### I.	PHINX
--	Tạo ra các phiên bản  database dựa trên những thay đổi  thuộc tính, table, dữ liệu trong database..( quá trình phát triển database)###
+### I.	PHINX!!!
+-	Tạo ra các phiên bản  database dựa trên những thay đổi  thuộc tính, table, dữ liệu trong database..( quá trình phát triển database)
 ### Trang Đăng Nhập !!!
 ![](https://github.com/nguyenquang2302/BlogTaoLao/blob/master/Screenshot/login.png)
 ### Danh sách bài viết khi chưa đăng nhập!!!
