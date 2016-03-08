@@ -20,7 +20,7 @@ Tạo ra các phiên bản  database dựa trên những thay đổi  thuộc t�
 
 2. khi gọi seeding sẽ chạy hàm run();
 
-#IV.COMMANT
+#IV.COMMANDS
 1. https://phinx.readthedocs.org/en/latest/commands.html
 
 2.	Vào thư mục project  chứa file phinx.yml
