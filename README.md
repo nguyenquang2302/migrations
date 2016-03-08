@@ -85,3 +85,7 @@ environments:
 #VI.KIỂU DỮ LIỆU
 
 https://phinx.readthedocs.org/en/latest/migrations.html#valid-column-types
+
+ #VII. THỰC HÀNH
+ 
+ 1. VIẾT 1 VÀI TRƯỜNG HỢP UP DOWN  thay thế cho change()  hoặc những query change() không hỗ trợ
