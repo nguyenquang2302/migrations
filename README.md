@@ -103,7 +103,9 @@ timestamp
 uuid
 ```
    ### đối với mỗi kiểu dữ liệu cho column ta cũng có thể chỉnh sửa option cho nó bằng các option sau:
+   
 	####a.Đa số các colum đề hỗ trợ
+	
 ```
 		limit	giới hạn tối đa chiều dài
 		length	alias for limit
@@ -120,6 +122,7 @@ uuid
 ```
 
 	####c Đối với các cột mặc định chỉ cho phép những giá trị kiểu enum
+	
 ```
 		values
 ```
@@ -136,6 +139,7 @@ uuid
 
 ```
 	###f. khóa ngoại
+	
 ```
 		update   chỉnh sửa thay đổi khi khóa ngoại thay đổi
 		delete	  khóa ngoại xóa-> xóa theo
