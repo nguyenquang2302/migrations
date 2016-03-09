@@ -107,7 +107,7 @@ uuid
 
 ###2.Đối với mỗi kiểu dữ liệu cho column ta cũng có thể chỉnh sửa option cho nó bằng các option sau:
 
-a.Đa số các colum đề hỗ trợ
+####a.Đa số các colum đề hỗ trợ
 	
 ```
 		limit	giới hạn tối đa chiều dài
@@ -117,31 +117,31 @@ a.Đa số các colum đề hỗ trợ
 		after	nằm sau vị trí ..
 		comment	 add comment cho column
 ```
-	b. Đối với số thập phân
+####b.Đối với số thập phân
 
 ```
 		precision	kết hợp với scale  để tăng tỉ lệ chính xác
 		scale		kết hợp với precision  để tăng tỉ lệ chính xác
 ```
 
-	c. Đối với các cột mặc định chỉ cho phép những giá trị kiểu enum
+####c.Đối với các cột mặc định chỉ cho phép những giá trị kiểu enum
 	
 ```
 		values
 ```
-	d. Đối với số nguyên
+####d.Đối với số nguyên
 
 ```
 		identity  áp dụng  tự động tăng ( thường danh cho id - khóa chính)
 		signed Chỉnh trường hợp số  không dấu
 ```
-	e. Đối với số nguyên
+####e.Đối với số nguyên
 
 ```
 	signed Chỉnh trường hợp số  không dấu
 
 ```
-	f. khóa ngoại
+####f.khóa ngoại
 	
 ```
 		update   chỉnh sửa thay đổi khi khóa ngoại thay đổi
