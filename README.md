@@ -182,10 +182,11 @@ public function change()
             ->create();
      }
 	
-	```
+```
 ##2.Demo Tạo bảng với khóa ngoại không phải id , không tự tăng và có 2 khóa ngoại
 
 ```
+
 public function change()
     {
         $table = $this->table('post_tag', [
@@ -198,4 +199,5 @@ public function change()
             ->addColumn('updated_at', 'timestamp')
             ->create();
     }
+    
     ```
