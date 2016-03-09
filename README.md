@@ -106,7 +106,7 @@ uuid
 ```
 
 ###2.Đối với mỗi kiểu dữ liệu cho column ta cũng có thể chỉnh sửa option cho nó bằng các option sau:
-   
+   ```
 	a.Đa số các colum đề hỗ trợ
 	
 ```
