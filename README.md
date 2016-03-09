@@ -82,9 +82,52 @@ environments:
         adapter: mysql
         host: localhost
 
-# VI.KIỂU DỮ LIỆU
+# VI.KIỂU DỮ LIỆU CHO COLUMN
 
 https://phinx.readthedocs.org/en/latest/migrations.html#valid-column-types
+
+### 1 Số kiểu dữ liệu quan trọng 
+```
+biginteger
+binary
+boolean
+date
+datetime
+decimal
+float
+integer
+string
+text
+time
+timestamp
+uuid
+```
+### đối với mỗi kiểu dữ liệu cho column ta cũng có thể chỉnh sửa option cho nó bằng các option sau:
+####a.Đa số các colum đề hỗ trợ
+```
+limit	giới hạn tối đa chiều dài
+length	alias for limit
+default	mặc định giá trị 
+null	cho phép null các giá trị ( không được đặt với khóa chính)
+after	nằm sau vị trí ..
+comment	 add comment cho column
+```
+####b. Đối với số thập phân
+
+```
+precision	kết hợp với scale  để tăng tỉ lệ chính xác
+scale		kết hợp với precision  để tăng tỉ lệ chính xác
+```
+
+####c Đối với các cột mặc định chỉ cho phép những giá trị kiểu enum
+```
+values
+```
+####d. Đối với số nguyên
+
+```
+identity  áp dụng  tự động tăng ( thường danh cho id - khóa chính)
+```
 
 #VII. THỰC HÀNH
  
