@@ -148,5 +148,38 @@ uuid
 		delete	  : khóa ngoại xóa-> xóa theo
 ```
 #VII. THỰC HÀNH
- 
- 1. VIẾT 1 VÀI TRƯỜNG HỢP UP DOWN  thay thế cho change()  hoặc những query change() không hỗ trợ
+##1.Demo Tạo bảng với 1 số loại dữ liệu và khóa ngoại
+```
+public function change()
+    {
+        //create permissions
+        $table = $this->table('permissions', [
+            'id' => 'id',
+            'primary_key' => 'id'
+        ]);
+        //add column permissions
+        $table->addColumn('name', 'string', ['limit' => 45])
+            ->addColumn('role', 'text')
+            ->create();
+
+        //create admins
+        $table = $this->table('admins', [
+            'id' => 'id',
+            'primary_key' => 'id'
+        ]);
+        $table->addColumn('username', 'string', ['limit' => 45])
+            ->addColumn('password', 'string', ['limit' => 255])
+            ->addColumn('fname', 'string', ['limit' => 45])
+            ->addColumn('lname', 'string', ['limit' => 45])
+            ->addColumn('id_permission', 'integer')
+            ->addColumn('phone', 'string', ['limit' => 15])
+            ->addColumn('images', 'string', ['limit' => 300])
+            ->addColumn('last_login_date', 'timestamp')
+            ->addColumn('last_login_ip', 'string', ['limit' => 45])
+            ->addColumn('created_at', 'timestamp')
+            ->addColumn('updated_at', 'timestamp')
+            ->addForeignKey('id_permission', 'permissions', 'id', array('delete'=> 'NO_ACTION', 'update'=> 'NO_ACTION'))
+            ->create();
+     }
+	
+	```
