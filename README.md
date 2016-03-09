@@ -102,6 +102,7 @@ time
 timestamp
 uuid
 ```
+
    ### đối với mỗi kiểu dữ liệu cho column ta cũng có thể chỉnh sửa option cho nó bằng các option sau:
    
 	####a.Đa số các colum đề hỗ trợ
