@@ -86,7 +86,8 @@ environments:
 
 https://phinx.readthedocs.org/en/latest/migrations.html#valid-column-types
 
-### 1 Số kiểu dữ liệu quan trọng 
+###1.Số kiểu dữ liệu quan trọng 
+
 ```
 biginteger
 binary
@@ -101,9 +102,10 @@ text
 time
 timestamp
 uuid
+
 ```
 
-   ### đối với mỗi kiểu dữ liệu cho column ta cũng có thể chỉnh sửa option cho nó bằng các option sau:
+###2.Đối với mỗi kiểu dữ liệu cho column ta cũng có thể chỉnh sửa option cho nó bằng các option sau:
    
 	####a.Đa số các colum đề hỗ trợ
 	
@@ -122,7 +124,7 @@ uuid
 		scale		kết hợp với precision  để tăng tỉ lệ chính xác
 ```
 
-	####c Đối với các cột mặc định chỉ cho phép những giá trị kiểu enum
+	####c. Đối với các cột mặc định chỉ cho phép những giá trị kiểu enum
 	
 ```
 		values
