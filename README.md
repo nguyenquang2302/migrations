@@ -236,6 +236,8 @@ chạy composer require faker  column
  
 ```
 
+Tạo 100 user mẫu với seeder sử dụng faker để tạo dữ liệu ảo 
+
 ```
 <?php
 
