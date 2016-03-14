@@ -41,6 +41,10 @@ không thể sử dụng template và class cùng 1 lệnh
 -	```	php vendor/robmorgan/phinx/bin/phinx rollback ```  => Trở về phiên bản trước
 
 -	```	php vendor/robmorgan/phinx/bin/phinx status ``` => kiểm tra phiên bản
+4.  Sử dụng với Seeder
+-	```php vendor/robmorgan/phinx/bin/phinx seed:create UserSeeder ``` => tạo ra 1 seeder ```
+-	```php vendor/robmorgan/phinx/bin/phinx seed:run ``` => chạy all seeder ```
+-	```php vendor/robmorgan/phinx/bin/phinx seed:run -s UserSeeder ``` => chạy 1 seeder ```
 
 #V.CẤU HÌNH
 * cấu hình file phinx.yml để  cài đặt database…
