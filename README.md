@@ -172,6 +172,7 @@ public function change()
             ->addColumn('fname', 'string', ['limit' => 45])
             ->addColumn('lname', 'string', ['limit' => 45])
             ->addColumn('id_permission', 'integer')
+            ->addColumn('money', 'integer')
             ->addColumn('phone', 'string', ['limit' => 15])
             ->addColumn('images', 'string', ['limit' => 300])
             ->addColumn('last_login_date', 'timestamp')
@@ -201,29 +202,23 @@ public function change()
     }
     
 ```
-##3.Demo Sử dụng function up và down 
+##3.Demo Sử dụng function up và down  ( trường hợp  không thể dùng  change)
 
 ``` 
 public function up()
+ 
     {
-    	$users = $this->table('users');
-        $users->addColumn('username', 'string', array('limit' => 20))
-              ->addColumn('password', 'string', array('limit' => 40))
-              ->addColumn('password_salt', 'string', array('limit' => 40))
-              ->addColumn('email', 'string', array('limit' => 100))
-              ->addColumn('first_name', 'string', array('limit' => 30))
-              ->addColumn('last_name', 'string', array('limit' => 30))
-              ->addColumn('created', 'datetime')
-              ->addColumn('updated', 'datetime', array('null' => true))
-              ->addIndex(array('username', 'email'), array('unique' => true))
-              ->save();
+        // execute()
+        $count = $this->execute('update products   set money = money +100'); // returns the number of affected rows
     }
     
 ```
 ```
 public function down()
     {
-    	$this->dropTable('users');
+    	 $count = $this->execute('update products   set money = money -100'); // returns the number of affected rows
     }
 ```
     
+
+
