@@ -42,18 +42,18 @@ không thể sử dụng template và class cùng 1 lệnh
 
 -	```	php vendor/robmorgan/phinx/bin/phinx status ``` => kiểm tra phiên bản
 4.  Sử dụng với Seeder
--	```php vendor/robmorgan/phinx/bin/phinx seed:create UserSeeder ``` => tạo ra 1 seeder ```
--	```php vendor/robmorgan/phinx/bin/phinx seed:run ``` => chạy all seeder ```
--	```php vendor/robmorgan/phinx/bin/phinx seed:run -s UserSeeder ``` => chạy 1 seeder ```
+-	```php vendor/robmorgan/phinx/bin/phinx seed:create UserSeeder ``` => tạo ra 1 seeder
+-	```php vendor/robmorgan/phinx/bin/phinx seed:run ``` => chạy all seeder
+-	```php vendor/robmorgan/phinx/bin/phinx seed:run -s UserSeeder ``` => chạy 1 seeder
 
 #V.CẤU HÌNH
 * cấu hình file phinx.yml để  cài đặt database…
 
 paths:
-
     migrations: %%PHINX_CONFIG_DIR%%/app/migrations
+    seeds: %%PHINX_CONFIG_DIR%%/app/seeds
     
-	# Cấu hình vị trí lưu file migrations
+	# Cấu hình vị trí lưu file migrations và seeds
 	
 environments:
 
@@ -151,7 +151,7 @@ uuid
 		update   : chỉnh sửa thay đổi khi khóa ngoại thay đổi
 		delete	  : khóa ngoại xóa-> xóa theo
 ```
-#VII. THỰC HÀNH
+#VII. THỰC HÀNH VỚI MIGRATION
 ##1.Demo Tạo bảng với 1 số loại dữ liệu và khóa ngoại
 ```
 public function change()
@@ -223,6 +223,51 @@ public function down()
     	 $count = $this->execute('update products   set money = money -100'); // returns the number of affected rows
     }
 ```
-    
 
+#VII. THỰC HÀNH VỚI SEEDER
+
+#1. Demo
+
+chạy composer require faker  column
+
+```
+
+ require fzaninotto/faker
+ 
+```
+
+```
+<?php
+
+use Phinx\Seed\AbstractSeed;
+
+class UserSeeder extends AbstractSeed
+{
+    /**
+     * Run Method.
+     *
+     * Write your database seeder using this method.
+     *
+     * More information on writing seeders is available here:
+     * http://docs.phinx.org/en/latest/seeding.html
+     */
+
+    public function run()
+    {
+      $faker = Faker\Factory::create();
+      $data = [];
+      for ($i = 0; $i < 100; $i++) {
+          $data[] = [
+              'username'      => $faker->userName,
+              'password'      => sha1($faker->password),
+              'email'         => $faker->email,
+              'created_at'       => date('Y-m-d H:i:s'),
+          ];
+      }
+
+      $this->insert('members', $data);
+    }
+}
+
+```
 
